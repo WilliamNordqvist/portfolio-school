@@ -1,0 +1,131 @@
+*{
+margin: 0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #20545F;
+    overflow: hidden;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a.nav {
+    float: right;
+    color: #f2f2f2;
+    padding: 0;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 20px;
+    margin-top: 1cm;
+    margin-bottom:0;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    float: left;
+    color: #f2f2f2;
+    padding: 30px 19px;
+    text-decoration: none;
+    font-size: 35px;
+    margin-right: 20px;
+    margin-top: 0px;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Change the color of links on hover */
+.topnav a.nav:hover {
+   color:#EB4936;
+   
+}
+
+.topnav a.active:hover{
+    color:white !important;
+    opacity: 1 !important;
+}
+
+
+
+/* background container  */
+
+.container{
+    /* background-image: url(background.png); */
+    background-color: #EB4936;
+    background-repeat: repeat;
+    background-size: cover;
+    padding-bottom: 15%;
+  
+}
+
+/* Picture  */
+
+header{
+    padding-top:5%;
+}
+
+#william {
+    width: 25%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    object-fit: scale-down;
+    /* border: 8px solid #19364C; */
+    opacity: 1;
+    }
+
+    /* Name and front end presentation */
+
+    .presentation{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    object-fit: scale-down;
+    font-family: 'Bree Serif', serif;
+    
+
+
+    }
+
+    .presentation ,h1, p{
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+
+    i{
+        font-size: 40px;
+    }
+    
+    h1{
+        margin-top:50px;
+        font-size:50px;
+    }
+
+    #star {
+        width: 30%
+    }
+
+    #front-end{
+        font-size:30px;
+    }
+
+    
+    /* portfolio  */
+
+    .portfolio {
+        background-color:#CDEBF2;
+        margin-top: 0%;
+        padding-bottom:7%;
+    }
+
+   .portfolio h1 {
+       margin-top:0;
+       padding-top: 5%;
+   }
