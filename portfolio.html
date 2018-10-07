@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">   
     <meta charset="UTF-8">
@@ -12,31 +13,74 @@
 <body>
 
 <div class="topnav">
-                <a class="active">WILLIAM NORDQVIST</a>
-                <a class="nav" href="#news">CONTACT</a>
-                <a class="nav" href="#contact">ABOUT</a>
-                <a class="nav" href="#about">PORTFOLIO</a>
+    <div>
+        <a class="active">WILLIAM NORDQVIST <br>
+            <i  id="hamburger"class="fas fa-bars"></i> 
+                    
+        </a>
+         <a class="nav" href="#news">CONTACT</a>
+         <a class="nav" href="#contact">SKILLS</a>
+         <a class="nav" href="#about">PORTFOLIO</a>
+    </div>
+
+    <div class="hamburgerOptions">
+        <a class="burgerNav" href="#news">PORTFOLIO</a>
+        <a class="burgerNav" href="#contact">SKILLS</a>
+        <a class="burgerNav" href="#about">CONTACT</a> 
+
+    </div>
+                            
+                
 </div>
 
 <div class = "container">
 
  
     <header>
-        <img id="william" src="jag.1.jpg" alt="William">
+       <img id="william" src="jag.1.jpg" alt="William">
     </header>
+
     <div class = "presentation">
-            <h1>WILLIAM NORDQVIST</h1> <br>
-            <img id="star" src="star.png" alt="">
-           <!-- <span></span> <i class="fas fa-star"></i> <span> </span> -->
-            <p id="front-end">Front End Developer </p>
-            <p>Student @KYH</p>
+        <h1>WILLIAM NORDQVIST</h1> <br>
+        <img id="star" src="star.png" alt="">
+        <p id="front-end">Front End Developer </p>
+         <p>Student @KYH</p>
     </div>
     
 </div>
 <div class="portfolio">
     <H1 id="portH1">PORTFOLIO</H1>
+
+<!-- Gallery start here  -->
+
+    <div class="flex-container">
+        <img class="pic"src="uber.png" alt="">
+        <div class="content">  Det här är en bild från UBER där jag jobbade som Community Operation Manager i 3 år.</p></div> 
+        
+    </div>
+    
+
+    <div class="flex-container">
+        <img class="pic"src="landing.png" alt="">
+        <div class="content"> Vår första uppgift på KYH skolan var att skapa en Landing page till skolan som skulle fungera som en ansökningsportal. </div>
+    </div>
+
+    <div class="flex-container">
+            <img class="pic"src="portfolio.png" alt="">
+            <div class="content"> Den första betygsgrundandade projekt där vi fick i uppgift att bygga en egen Portfolio i grunläggande HTML/CSS tillsammans med återanvänd Javascript.  </div>
+    </div>
+
 </div>
 
-    
+<!-- Skills start here -->
+<div class="skillcontainer">
+        <h1>My Skills</h1>
+    <img src="skill.png" alt="skill">
+</div>
+
+
+
+
+<script src="portfolio.js"></script>
 </body>
 </html>
