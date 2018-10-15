@@ -18,15 +18,15 @@
             <i  id="hamburger"class="fas fa-bars"></i> 
                     
         </a>
-         <a class="nav" href="#news">CONTACT</a>
+         <a class="nav" href="#news">ABOUT ME</a>
          <a class="nav" href="#contact">SKILLS</a>
          <a class="nav" href="#about">PORTFOLIO</a>
     </div>
-
-    <div class="hamburgerOptions">
-        <a class="burgerNav" href="#news">PORTFOLIO</a>
-        <a class="burgerNav" href="#contact">SKILLS</a>
-        <a class="burgerNav" href="#about">CONTACT</a> 
+<!-- Hidden option  -->
+    <div id="hamburgerOptions" style ="display: none">
+        <a id="toPortfolio" class="burgerNav">PORTFOLIO </a>
+        <a id="toSkills" class="burgerNav">SKILLS</a>
+        <a id="toBottom" class="burgerNav">ABOUT ME</a> 
 
     </div>
                             
@@ -74,12 +74,12 @@
 </div>
 
 <!-- Skills start here -->
-<div class="skillcontainer">
+<div id="skillcontainer" class="skillcontainer">
         <h1>SKILLS</h1>
 
         <div class="barcontainer">
             
-            <div class="wrapper">
+            <div id="barstarts" class="wrapper">
                 <div class = "css second">CSS<span>80%</span></div>
             </div>
             <div class="wrapper">
@@ -95,13 +95,34 @@
                     <div class = "ux first">UX/UI<span>15%</span></div>
             </div>
             <div class="wrapper">
-                    <div class = "sql first">SQL<span>50%</span></div>
+                    <div id ="check" class = "sql">SQL<span>50%</span></div>
             </div>
            
 </div>
 
+<!-- footer -->
 
-
+<div class="footer">
+        <div class="section-content-wrapper">
+          <!--   contacts -->
+          <div id="contact">
+            <h2 class="section-title text-center">About Me</h2>
+            <hr class="section-title-underline">
+            <p class = "section-title-about">Mitt namn är William Nordqvist, född 1989 och bosatt i Stockholm. Jag pluggar på KHY till Front-End Developer och letar efter praktikplats till VT 2019. </p>
+            <p class="social-media">
+              <a href="https://www.facebook.com/wnordqvist" class="social-media"><i class="fab fa-facebook-square"></i></a>
+              <a href="mailto:wnordqvist@gmail.com" class="social-media"><i class="far fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/william-nordqvist-7221b340/" class="social-media" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/WilliamNordqvist" class="social-media" target="_blank"><i class="fab fa-github-square"></i></a>
+              <a href="https://www.instagram.com/willmister25/?hl=sv" class="social-media" target="_blank"><i class="fab fa-instagram"></i></a>
+            </p>
+          </div>
+    
+          <p class="copyright text-center">
+            <span id="footer-bottom">&copy; 2018. All Rights Reserved.</span>
+          </p>
+        </div>
+      </div>
 
 <script src="portfolio.js"></script>
 </body>
