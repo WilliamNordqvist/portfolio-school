@@ -38,7 +38,7 @@ font-family: 'Bree Serif', serif;
     margin-top: 0px;
 }
 
-    #hamburger, .topnav a.burgerNav {
+    #hamburger, .topnav a.burgerNav, #hamburgerOptions {
     display:none;
 }
 

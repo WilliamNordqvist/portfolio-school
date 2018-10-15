@@ -35,25 +35,22 @@ hamburger.addEventListener("click",function(){
     };    
 
 
-
-
-var skillbar = document.getElementById('skillcontainer');
 var checkclass = document.getElementById("check");
 
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    if (checkclass.classList.contains('sql') && document.documentElement.scrollTop > 800) {
-        // setTimeout(css,2000);
-        // setTimeout(htm,2000);
-        // setTimeout(jav,2000);
-        // setTimeout(php,2000);
-        // setTimeout(ux,2000);
-        // setTimeout(sql,2000);
-        // console.log(document.documentElement.scrollTop);
-        // return;
-        }
         
-}
+window.onscroll = function(){
+    var test = document.querySelector("#skillcontainer").getBoundingClientRect().top
+    console.log(test);
+    if(test < 450 && checkclass.classList.contains('sql')){
+        console.log('funkar')
+        setTimeout(css,1000);
+        setTimeout(htm,1000);
+        setTimeout(jav,1000);
+        setTimeout(php,1000);
+        setTimeout(ux,1000);
+        setTimeout(sql,1000);
+    }      
+};
 
 
 // button to click
@@ -63,31 +60,19 @@ var toSkills = document.getElementById("toSkills");
 // Where to go
 var footer = document.getElementById("footer-bottom");
 var barstarts = document.getElementById("barstarts");
-var port =  document.getElementById("portH1");
-// scrollHight var
-// var i = footer.offsetTop;
-// var u = barstarts.offsetTop;
-// var p = port.offsetTop;
+var port =  document.querySelector(".portfolio");
+
 
 toBottom.addEventListener('click',function(){
-    footer.scrollIntoView({ behavior: 'smooth' });
+    footer.scrollIntoView({ behavior: 'smooth',block: "end", inline: "start" });
     hamburgerOptions.style.display = 'none';
 });
 toPortfolio.addEventListener('click',function(){
-    port.scrollIntoView({ behavior: 'smooth' });
+    port.scrollIntoView({behavior: 'smooth',block: "start", inline: "end"});
     hamburgerOptions.style.display = 'none';
 });
 toSkills.addEventListener('click',function(){
-    barstarts.scrollIntoView({ behavior: 'smooth' });
+    barstarts.scrollIntoView({behavior: 'smooth',block: "center", inline: "start" });
     hamburgerOptions.style.display = 'none';
-    if(checkclass.classList.contains('sql')){
-        setTimeout(css,2000);
-        setTimeout(htm,2000);
-        setTimeout(jav,2000);
-        setTimeout(php,2000);
-        setTimeout(ux,2000);
-        setTimeout(sql,2000);
-        return;
-    }
 });
 
