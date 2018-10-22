@@ -4,75 +4,76 @@
     <link rel="stylesheet" type="text/css" href="portfolio.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet"> 
+    <meta name="description" content="Mitt namn är William Nordqvist, född 1989 och bosatt i Stockholm. Jag pluggar på KYH till Front-End Developer och letar efter praktikplats till VT 2019.">
+    <meta name="keywords" content="HTML,CSS,Portfolio,JavaScript,Student,Front-End Developer">  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Williams Portfolio</title>
 </head>
 <body>
-
-<div class="topnav">
+<section class="topnav">
     <div>
         <a class="active">WILLIAM NORDQVIST <br>
-            <i  id="hamburger"class="fas fa-bars"></i> 
+            <i  id="hamburger" class="fas fa-bars"></i> 
                     
         </a>
-         <a class="nav" href="#news">ABOUT ME</a>
-         <a class="nav" href="#contact">SKILLS</a>
-         <a class="nav" href="#about">PORTFOLIO</a>
+         <a class="nav toBottom">ABOUT ME</a>
+         <a class="nav toSkills">SKILLS</a>
+         <a class="nav toPortfolio">PORTFOLIO</a>
     </div>
 <!-- Hidden option  -->
     <div id="hamburgerOptions" style ="display: none">
-        <a id="toPortfolio" class="burgerNav">PORTFOLIO </a>
-        <a id="toSkills" class="burgerNav">SKILLS</a>
-        <a id="toBottom" class="burgerNav">ABOUT ME</a> 
+        <a class="burgerNav toPortfolio">PORTFOLIO </a>
+        <a class="burgerNav toSkills">SKILLS</a>
+        <a class="burgerNav toBottom">ABOUT ME</a> 
 
     </div>
-                            
-                
-</div>
+<!-- Hidden option end -->               
+</section>
 
-<div class = "container">
-
- 
+<section class = "container">
     <header>
        <img id="william" src="jag.1.jpg" alt="William">
     </header>
 
-    <div class = "presentation">
-        <h1>WILLIAM NORDQVIST</h1> <br>
-        <img id="star" src="star.png" alt="">
+    <article class = "presentation">
+        <header>
+            <h1>WILLIAM NORDQVIST</h1> <br>
+        </header>
+        <img id="star" src="star.png" alt="icon">
         <p id="front-end">Front End Developer </p>
          <p>Student @KYH</p>
-    </div>
-    
-</div>
+    </article> 
+</section>
 
 <!-- Gallery start here  -->
 
-<div class="portfolio">
-    <H1 id="portH1">PORTFOLIO</H1>
+<section class = "contentContainer">
+    <div class="portfolio">
+        <H1>PORTFOLIO</H1>
 
-    <div class="flex-container">
-        <img class="pic"src="jobb.png" alt="">
-        <div class="content">  Det här är en bild från UBER där jag jobbade som Community Operation Manager i 3 år.</p></div> 
+        <div class="flex-container">
+            <img class="pic" src="jobb.png" alt="work">
+            <article class="content">  Det här är en bild från UBER där jag jobbade som Community Operation Manager i 3 år.</article> 
+        </div>
+
+        <div class="flex-container">
+            <img class="pic" src="landing.png" alt="landingpage">
+            <article class="content"> Vår första uppgift på KYH skolan var att skapa en Landing page till skolan som skulle fungera som en ansökningsportal.</article>
+        </div>
+
+        <div class="flex-container">
+            <img class="pic" src="portfolio.png" alt="portfolio">
+            <article class="content"> Den första betygsgrundandade projekt där vi fick i uppgift att bygga en egen Portfolio i grunläggande HTML/CSS tillsammans med återanvänd Javascript. </article>
+        </div>
+
     </div>
-
-    <div class="flex-container">
-        <img class="pic"src="landing.png" alt="">
-        <div class="content"> Vår första uppgift på KYH skolan var att skapa en Landing page till skolan som skulle fungera som en ansökningsportal. </div>
-    </div>
-
-    <div class="flex-container">
-        <img class="pic"src="portfolio.png" alt="">
-        <div class="content"> Den första betygsgrundandade projekt där vi fick i uppgift att bygga en egen Portfolio i grunläggande HTML/CSS tillsammans med återanvänd Javascript.  </div>
-    </div>
-
-</div>
+</section>
 
 <!-- Skills start here -->
-<div id="skillcontainer" class="skillcontainer">
+<section id="skillcontainer" class="skillcontainer">
         <h1>SKILLS</h1>
 
         <div class="barcontainer">
@@ -96,31 +97,36 @@
                     <div id ="check" class = "sql">SQL<span>50%</span></div>
             </div>
            
-</div>
+        </div>
+
+</section>
 
 <!-- footer -->
-
-<div class="footer">
+<section class="footer">
         <div class="section-content-wrapper">
           <!--   contacts -->
           <div id="contact">
-            <h2 class="section-title text-center">About Me</h2>
-            <hr class="section-title-underline">
-            <p class = "section-title-about">Mitt namn är William Nordqvist, född 1989 och bosatt i Stockholm. Jag pluggar på KYH till Front-End Developer och letar efter praktikplats till VT 2019. </p>
-            <p class="social-media">
+            <article>
+                <h2 class="section-title text-center">About Me</h2>
+                <hr class="section-title-underline">
+                <p class = "section-title-about">Mitt namn är William Nordqvist, född 1989 och bosatt i Stockholm. Jag pluggar på KYH till Front-End Developer och letar efter praktikplats till VT 2019. </p>
+                <!-- <p class="social-media"> -->
+            </article>
+
+            <div class ="icons">
               <a href="https://www.facebook.com/wnordqvist" class="social-media"><i class="fab fa-facebook-square"></i></a>
               <a href="mailto:wnordqvist@gmail.com" class="social-media"><i class="far fa-envelope"></i></a>
               <a href="https://www.linkedin.com/in/william-nordqvist-7221b340/" class="social-media" target="_blank"><i class="fab fa-linkedin"></i></a>
               <a href="https://github.com/WilliamNordqvist" class="social-media" target="_blank"><i class="fab fa-github-square"></i></a>
               <a href="https://www.instagram.com/willmister25/?hl=sv" class="social-media" target="_blank"><i class="fab fa-instagram"></i></a>
-            </p>
+            </div>
           </div>
     
           <p class="copyright text-center">
             <span id="footer-bottom">&copy; 2018. All Rights Reserved.</span>
           </p>
         </div>
-      </div>
+</section>
 
 <script src="portfolio.js"></script>
 </body>

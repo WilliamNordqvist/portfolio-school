@@ -1,4 +1,4 @@
-var hamburger = document.getElementById("hamburger");
+var hamburger = document.getElementById("hamburger") ;
 var burgerNav = document.querySelectorAll(".burgerNav");
 var hamburgerOptions = document.getElementById('hamburgerOptions');
 
@@ -15,64 +15,47 @@ hamburger.addEventListener("click",function(){
 
     // skill bar js
 
-    var php = function(){
-        document.querySelector(".php").className = "php1";
-    };
-    var css = function(){
-        document.querySelector(".css").className = "css1";
-    };
-    var htm = function(){
-    document.querySelector(".htm").className = "htm1";	
-    };
-    var jav = function(){
-    document.querySelector(".javascript").className = "javascript1";	
-    };
-    var ux = function(){
-        document.querySelector(".ux").className = "ux1";	
-    };
-    var sql = function(){
-        document.querySelector(".sql").classList = "sql1";	
-    };    
+   
+    window.onscroll = function(){
+    var test = document.querySelector("#skillcontainer")
+    .getBoundingClientRect().top;
+    var arrey = [".php", ".css", ".htm",".javascript",".ux",".sql"];
+    var checkclass = document.getElementById("check");
 
-
-var checkclass = document.getElementById("check");
-
-        
-window.onscroll = function(){
-    var test = document.querySelector("#skillcontainer").getBoundingClientRect().top
-    console.log(test);
-    if(test < 450 && checkclass.classList.contains('sql')){
-        console.log('funkar')
-        setTimeout(css,1000);
-        setTimeout(htm,1000);
-        setTimeout(jav,1000);
-        setTimeout(php,1000);
-        setTimeout(ux,1000);
-        setTimeout(sql,1000);
-    }      
+    if(test < 380 && checkclass.classList.contains('sql')){
+        arrey.forEach(function(x){
+            var i = document.querySelector(x);
+            var c = x.replace ("."," ")
+            c = c+"1";
+            i.className = c 
+   })      
+  }
 };
 
+// Scroll funktion 
 
-// button to click
-var toBottom = document.getElementById("toBottom");
-var toPortfolio = document.getElementById("toPortfolio");
-var toSkills = document.getElementById("toSkills");
-// Where to go
-var footer = document.getElementById("footer-bottom");
-var barstarts = document.getElementById("barstarts");
-var port =  document.querySelector(".portfolio");
+document.querySelectorAll(".toBottom").forEach(function(x){
+    x.addEventListener('click',function(){
+    document.getElementById("footer-bottom").scrollIntoView({ behavior: 'smooth',block: "end",inline: "start" 
+})
+    hamburgerOptions.style.display = 'none';
+    })  
+});
 
+document.querySelectorAll(".toPortfolio").forEach(function(x){
+    x.addEventListener('click',function(){
+     document.querySelector(".portfolio").scrollIntoView({behavior: 'smooth',block: "start", inline: "start"
+    })
+    hamburgerOptions.style.display = 'none';
+    })
+});
 
-toBottom.addEventListener('click',function(){
-    footer.scrollIntoView({ behavior: 'smooth',block: "end", inline: "start" });
+document.querySelectorAll(".toSkills").forEach(function(x){
+    x.addEventListener('click',function(){
+    document.querySelector('#skillcontainer').scrollIntoView({behavior: 'smooth',block: "start", inline: "start" 
+    })
     hamburgerOptions.style.display = 'none';
+    })
 });
-toPortfolio.addEventListener('click',function(){
-    port.scrollIntoView({behavior: 'smooth',block: "start", inline: "end"});
-    hamburgerOptions.style.display = 'none';
-});
-toSkills.addEventListener('click',function(){
-    barstarts.scrollIntoView({behavior: 'smooth',block: "center", inline: "start" });
-    hamburgerOptions.style.display = 'none';
-});
+
 
